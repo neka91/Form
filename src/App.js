@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Page1 from "./components/Page1";
-import Page2 from "./components/Page2";
-import Page3 from "./components/Page3";
+import SubmitPage from "./components/SubmitPage";
+import CheckoutPage from "./components/CheckoutPage";
+import SuccessPage from "./components/SuccessPage";
 
 function App() {
   const initialForm = {
@@ -25,7 +25,7 @@ function App() {
       : setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleClickPage1 = (event) => {
+  const handleClickSubmitPage = (event) => {
     event.preventDefault();
     for (let formField in form) {
       if (
@@ -41,7 +41,7 @@ function App() {
     setPage(2);
   };
 
-  const handleClickPage2 = (event) => {
+  const handleClickCheckoutPage = (event) => {
     event.target.name === "back" ? setPage(1) : setPage(3);
   };
 
@@ -54,22 +54,22 @@ function App() {
   return (
     <div className="App">
       {page === 1 && (
-        <Page1
+        <SubmitPage
           form={form}
           onChange={handleChange}
-          onClick={handleClickPage1}
+          onClick={handleClickSubmitPage}
           onFocus={handleFocus}
         />
       )}
       {page === 2 && (
-        <Page2
+        <CheckoutPage
           form={form}
           onChange={handleChange}
-          onClick={handleClickPage2}
+          onClick={handleClickCheckoutPage}
           onFocus={handleFocus}
         />
       )}
-      {page === 3 && <Page3 />}
+      {page === 3 && <SuccessPage />}
     </div>
   );
 }

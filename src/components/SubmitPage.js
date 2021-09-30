@@ -1,10 +1,10 @@
 import Form from "./Form";
 
-function Page1(props) {
+function SubmitPage(props) {
   return (
-    <div className="page1">
-      <h1 className="page1__title">T-Shirt order</h1>
-      <p className="page1__paragraph">
+    <div className="submitPage">
+      <h1 className="submitPage__title">T-Shirt order</h1>
+      <p className="submitPage__paragraph">
         Please fill in the form below and very soon your order will be on its
         way to you!
       </p>
@@ -18,4 +18,4 @@ function Page1(props) {
   );
 }
 
-export default Page1;
+export default SubmitPage;

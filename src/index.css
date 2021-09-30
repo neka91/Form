@@ -19,24 +19,24 @@ body {
   background-color: #ffcc99;
 }
 
-.page1,
-.page2,
-.page3 {
+.submitPage,
+.checkoutPage,
+.successPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.page1__title,
-.page2__title {
+.submitPage__title,
+.checkoutPage__title {
   margin-bottom: 17px;
   color: #ff9999;
   text-shadow: 2px 2px 4px #000000;
 }
 
-.page1__paragraph,
-.page2__paragraph {
+.submitPage__paragraph,
+.checkoutPage__paragraph {
   margin-bottom: 10px;
   line-height: 1.5em;
 }
@@ -56,7 +56,7 @@ body {
 }
 
 .form__button,
-.page2__button {
+.checkoutPage__button {
   margin: 0 30%;
   border: 2px solid #999999;
   border-radius: 5px;
@@ -74,7 +74,7 @@ body {
   background-color: #ff9966;
 }
 
-.page2__button {
+.checkoutPage__button {
   margin-bottom: 10px;
   padding: 3px;
   width: 60px;
